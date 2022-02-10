@@ -31,7 +31,7 @@ export default function App() {
         setCurrentNumber((fistNumber / lastNumber).toString())
         return
         case '%': 
-        setCurrentNumber((fistNumber / 100).toString())
+        setCurrentNumber((lastNumber*(fistNumber / 100) ).toString())
         return
     }
   }
