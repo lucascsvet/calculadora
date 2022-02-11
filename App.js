@@ -30,7 +30,7 @@ export default function App() {
       case '/': 
         setCurrentNumber((fistNumber / lastNumber).toString())
         return
-        case '%': 
+      case '%': 
         setCurrentNumber((lastNumber*(fistNumber / 100) ).toString())
         return
     }
@@ -55,6 +55,11 @@ export default function App() {
         calculator()
         return
       case '+/-':
+        if(setCurrentNumber > 0){
+          setCurrentNumber(currentNumber)
+        } else {
+          setCurrentNumber((currentNumber)*-1)
+        }
         return
     }
 
